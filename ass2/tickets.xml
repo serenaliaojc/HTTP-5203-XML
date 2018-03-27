@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<tickets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tickets.xsd">
+	<ticket id="1" status="pending" priority="high">
+		<submitdate>2018-01-30T09:08:19</submitdate>
+		<category>Technical</category>
+		<user>
+			<id>u0034</id>
+			<username>happytreefriend</username>
+		</user>
+		<description>PHPadmin error</description>
+	</ticket>
+	<ticket id="2" status="closed" priority="medium">
+		<submitdate>2018-02-01T17:25:01</submitdate>
+		<category>Complaint</category>
+		<user>
+			<id>u0001</id>
+			<username>user1.0.2</username>
+		</user>
+		<description>The man in the front desk needs to relearn his manner.</description>
+		<messages>
+			<message>
+				<content>Lorem ipsum dolor sit amet.</content>
+				<assignedstaff>
+					<id>s0004</id>
+					<firstname>Jessie</firstname>
+					<lastname>Drew</lastname>
+				</assignedstaff>
+			</message>
+			<message>
+				<content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, repudiandae.</content>
+				<assignedstaff>
+					<id>s0010</id>
+					<firstname>Conner</firstname>
+					<lastname>Kent</lastname>
+				</assignedstaff>
+			</message>
+		</messages>
+	</ticket>
+	<ticket id="3" status="assigned" priority="low">
+		<submitdate>2018-02-05T20:01:49</submitdate>
+		<category>Inquire</category>
+		<user>
+			<id>u0202</id>
+			<username>HelloMegan</username>
+		</user>
+		<description>Where can I check my subscriptions?</description>
+		<messages>
+			<message>
+				<content>Lorem ipsum dolor sit amet, consectetur.</content>
+				<assignedstaff>
+					<id>s0010</id>
+					<firstname>Conner</firstname>
+					<lastname>Kent</lastname>
+				</assignedstaff>
+			</message>
+		</messages>
+	</ticket>
+</tickets>

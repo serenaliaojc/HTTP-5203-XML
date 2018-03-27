@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="users.xsd">
+	<user id="u0034" type="client">
+		<name>
+			<username>happytreefriend</username>
+			<firstname>Jane</firstname>
+			<lastname>Crock</lastname>
+		</name>
+		<firstlogindate>2017-11-10T09:07:29</firstlogindate>
+		<lastlogindate>2018-01-30T19:08:19</lastlogindate>
+		<email>happytreefriend@gmail.com</email>
+		<avatar>avatar-random.jpg</avatar>
+		<password>password</password>
+	</user>
+	<user id="u0202" type="client">
+		<name>
+			<username>HelloMegan</username>
+			<firstname>Megan</firstname>
+			<middlename>Mars</middlename>
+			<lastname>Anderson</lastname>
+		</name>
+		<firstlogindate>2017-12-14T18:10:07</firstlogindate>
+		<lastlogindate>2018-02-11T09:18:15</lastlogindate>
+		<email>hellomegan@hotmail.com</email>
+		<avatar>hellomegan-photo.png</avatar>
+		<password>password</password>
+	</user>
+	<user id="s0010" type="admin">
+		<name>
+			<username>admin</username>
+			<firstname>Conner</firstname>
+			<lastname>Kent</lastname>
+		</name>
+		<firstlogindate>2014-01-14T08:00:00</firstlogindate>
+		<lastlogindate>2018-02-12T19:18:09</lastlogindate>
+		<email>admin@supporttickets.com</email>
+		<avatar>admin.jpg</avatar>
+		<password>admin</password>
+	</user>
+</users>
