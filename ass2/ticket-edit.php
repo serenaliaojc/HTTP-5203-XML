@@ -7,10 +7,7 @@ if (isset($_POST['edit_submit'])) {
 	$tickets = simplexml_load_file('tickets.xml');
 	$ticket = $tickets->xpath("/tickets/ticket[@id=".$ticket_id."]");
 	$ticket = $ticket[0];
-
-} else {
-	header("Location:login.php");
-}
+} 
 
 function dropdownList($itemList, $value) {
 	foreach ($itemList as $item) {
@@ -24,12 +21,32 @@ function dropdownList($itemList, $value) {
 
 if (isset($_POST['ticket_edit_submit'])) {
 
+	$ticket_id = $_POST['id'];
 	$ticket_priority = $_POST['priority'];
 	$ticket_category = $_POST['category'];
 	$ticket_status = $_POST['status'];
+
+	$tickets = simplexml_load_file('tickets.xml');
+	$ticket = $tickets->xpath("/tickets/ticket[@id=".$ticket_id."]");
+	$ticket = $ticket[0];
+
+	$ticket['priority'] = $ticket_priority;
+	$ticket->category = $ticket_category;
+	$ticket['status'] = $ticket_status;
+
 	if (isset($_POST['comment'])) {
-		$ticket_comment = $_POST['comment'];
+		
+		$staff_comment = $_POST['comment'];
+		$staff_id = $_COOKIE['uid'];
+
+		$users = simplexml_load_file('users.xml');
+		$staff = $users->xpath("/users/user[@id='".$staff_id."']");
+		$staff = $staff[0];
 	}
+
+	// var_dump($tickets);
+
+	// $tickets->saveXML("tickets.xml");
 }
 
  ?>
@@ -48,6 +65,7 @@ if (isset($_POST['ticket_edit_submit'])) {
  			<div>
  				<h2 class="text-secondary m-3">Ticket Information</h2>
  				<form action="ticket-edit.php" method="post">
+ 					<input type="hidden" name="id" value="<?php echo $ticket['id']; ?>">
  					<div class="row form-group m-2">
  						<label for="priority" class="col-sm-2 col-form-label font-weight-bold">Priority</label>
  						<select name="priority" id="priority" class="col-sm-3 form-control text-uppercase">

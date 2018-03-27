@@ -20,8 +20,10 @@ if (isset($_POST['login_submit'])) {
 		if ($r_pword[0]==$password) {
 
 			$type = $users->xpath("/users/user/name[username='".$username."']/ancestor::user/@type");
+			$uid = $users->xpath("/users/user/name[username='".$username."']/ancestor::user/@id");
 
 			setcookie('type', $type[0]);
+			setcookie('uid', $uid[0]);
 			
 			if ($type[0]=='admin') {
 				header("Location:admin-list.php");
