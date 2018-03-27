@@ -35,18 +35,29 @@ if (isset($_POST['ticket_edit_submit'])) {
 	$ticket['status'] = $ticket_status;
 
 	if (isset($_POST['comment'])) {
-		
+
 		$staff_comment = $_POST['comment'];
 		$staff_id = $_COOKIE['uid'];
 
 		$users = simplexml_load_file('users.xml');
 		$staff = $users->xpath("/users/user[@id='".$staff_id."']");
 		$staff = $staff[0];
+
+		if (!isset($ticket->messages)) {
+			$ticket->addChild('messages','');
+		}
+
+		$message = $ticket->messages->addChild('message','');
+		$message->addChild('content',$staff_comment);
+		$assignedstaff = $message->addChild('assignedstaff','');
+		$assignedstaff->addChild('id',$staff_id);
+		$assignedstaff->addChild('firstname',$staff->name->firstname);
+		$assignedstaff->addChild('lastname',$staff->name->lastname);
+
 	}
 
-	// var_dump($tickets);
-
-	// $tickets->saveXML("tickets.xml");
+	$tickets->saveXML("tickets.xml");
+	header("Location:admin-list.php");
 }
 
  ?>

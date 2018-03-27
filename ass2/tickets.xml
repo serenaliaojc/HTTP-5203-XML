@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <tickets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tickets.xsd">
 	<ticket id="1" status="pending" priority="high">
 		<submitdate>2018-01-30T09:08:19</submitdate>
@@ -53,6 +53,6 @@
 					<lastname>Kent</lastname>
 				</assignedstaff>
 			</message>
-		</messages>
+		<message><content>Comment Test</content><assignedstaff><id>s0010</id><firstname>Conner</firstname><lastname>Kent</lastname></assignedstaff></message><message><content/><assignedstaff><id>s0010</id><firstname>Conner</firstname><lastname>Kent</lastname></assignedstaff></message></messages>
 	</ticket>
 </tickets>
