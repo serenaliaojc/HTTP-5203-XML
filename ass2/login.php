@@ -37,6 +37,7 @@ if (isset($_POST['login_submit'])) {
 	}
 } else {
 	setcookie('type','',time()-3600);
+	setcookie('uid','',time()-3600);
 }
 
  ?>

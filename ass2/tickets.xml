@@ -53,6 +53,6 @@
 					<lastname>Kent</lastname>
 				</assignedstaff>
 			</message>
-		<message><content>Comment Test</content><assignedstaff><id>s0010</id><firstname>Conner</firstname><lastname>Kent</lastname></assignedstaff></message><message><content/><assignedstaff><id>s0010</id><firstname>Conner</firstname><lastname>Kent</lastname></assignedstaff></message></messages>
+		</messages>
 	</ticket>
 </tickets>

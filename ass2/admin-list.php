@@ -76,7 +76,10 @@ $tickets = simplexml_load_file('tickets.xml');
 	 			}
 	 			 ?>
 	 		</tbody>
- 	</table>
+	 	</table>
+	 	<form action='login.php' method='post'>
+			<input type='submit' class='btn btn-secondary' name='logout' value='Logout'>
+		</form>
  	</div>
  	
  </body>
