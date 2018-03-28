@@ -1,5 +1,9 @@
 <?php 
 
+if (!isset($_COOKIE['uid'])) {
+	header("Location:login.php");
+}
+
 if (isset($_POST['details_submit'])) {
 
 	$ticket_id = $_POST['id'];
