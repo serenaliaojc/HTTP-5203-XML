@@ -38,6 +38,9 @@ $tickets = simplexml_load_file('tickets.xml');
  <body>
  	<div class="container">
  		<h1>My Ticket List</h1>
+ 		<form action='ticket-add.php' method='post' class="mt-3 mb-3">
+			<input type='submit' class='btn btn-outline-danger' name='ticket_add' value='Add New Ticket'>
+		</form>
  		<table id="client-list" class="table table-hover">
 	 		<thead>
 	 			<th scope="col">Ticket ID</th>
@@ -71,9 +74,11 @@ $tickets = simplexml_load_file('tickets.xml');
 	 			 ?>
 	 		</tbody>
 	 	</table>
+
 	 	<form action='login.php' method='post'>
 			<input type='submit' class='btn btn-secondary' name='logout' value='Logout'>
 		</form>
+		
  	</div>
  </body>
  </html>
