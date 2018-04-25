@@ -1,0 +1,20 @@
+/* line 6, style.less */
+.container {
+  max-width: 700px;
+  text-align: center;
+  margin: 2rem auto;
+}
+/* line 11, style.less */
+.container h2 a {
+  color: #3fb1e3;
+}
+/* line 16, style.less */
+.container .personal-info img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 150px;
+}
+/* line 23, style.less */
+.container .charts div {
+  margin: 1rem auto;
+}
